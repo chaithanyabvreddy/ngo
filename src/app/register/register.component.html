@@ -1,3 +1,6 @@
+
+<h1>{{registerationHeader}}</h1>
+
 <div class="card"> 
     <div class="card-body">
        <form [formGroup]="registerForm" novalidate>
@@ -41,4 +44,6 @@
         </form>
     </div>
 </div>
+<div class="alert alert-success" *ngIf="sucessMessage">{{ sucessMessage }}</div>
+<div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
 

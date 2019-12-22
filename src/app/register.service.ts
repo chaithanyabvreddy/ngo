@@ -20,7 +20,9 @@ export class RegisterService {
       userName: userName,
       
     };
-      return   this.http.post(`http://localhost:8080/signup`, obj);
+    console.log("in registerservice");
+    return this.http.post(`http://localhost:8080/createUser`, obj);
+        
   }
 }
 
