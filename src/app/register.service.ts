@@ -10,7 +10,7 @@ export class RegisterService {
 
    }
 
-  registerUser(firstName:string,lastName:string,emailId:string,aadharCard:string,phoneNumer:number, userName:string){
+  registerUser(firstName:string,lastName:string,emailId:string,aadharCard:string,phoneNumer:number, userName:string,password:string){
     const obj = {
       firstName: firstName,
       lastName: lastName,
@@ -18,6 +18,7 @@ export class RegisterService {
       aadharCard: aadharCard,
       phoneNumer: phoneNumer,
       userName: userName,
+      password:password
       
     };
     console.log("in registerservice");

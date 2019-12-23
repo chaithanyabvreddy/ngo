@@ -1,5 +1,5 @@
 
-<h1>{{registerationHeader}}</h1>
+<h1>{{registerationHeader}} (उपयोगकर्ता पंजीकरण सेवा)</h1>
 
 <div class="card"> 
     <div class="card-body">
@@ -7,43 +7,56 @@
 
         
             <div class="form-group">
-                <label class="col-md-4">first name</label>
+                <label class="col-md-4">first name  (पहला नाम)</label>
                 <input type="text" class="form-control" formControlName="firstName" #firstName/>
             </div>
 
             <div class="form-group">
-                <label class="col-md-4">last name</label>
+                <label class="col-md-4">last name (उपनाम)</label>
                 <input type="text" class="form-control" formControlName="lastName" #lastName/>
             </div>
 
             <div class="form-group">
-                <label class="col-md-4">email id</label>
+                <label class="col-md-4">email id (ईमेल)</label>
                 <input type="text" class="form-control" formControlName="emailId" #emailId/>
             </div>
 
             <div class="form-group">
-                <label class="col-md-4">aadhar card</label>
+                <label class="col-md-4">aadhar card (आधार कार्ड)</label>
                 <input type="text" class="form-control" formControlName="aadharCard" #aadharCard/>
             </div>
 
             <div class="form-group">
-                <label class="col-md-4">phone number</label>
+                <label class="col-md-4">phone number (फ़ोन नंबर)</label>
                 <input type="text" class="form-control" formControlName="phoneNumer" #phoneNumer/>
             </div>
 
             <div class="form-group">
-                <label class="col-md-4">user name</label>
+                <label class="col-md-4">user name (लॉगिन नाम)</label>
                 <input type="text" class="form-control" formControlName="userName" #userName/>
             </div>
 
             <div class="form-group">
+                <label class="col-md-4">password (पासवर्ड)</label>
+                <input type="text" class="form-control" formControlName="password" #password/>
+            </div>
+
+            <div class="form-group">
                 <button (click)="registerUser(firstName.value,lastName.value,emailId.value,aadharCard.value,phoneNumer.value,
-                                 userName.value)"   class="btn btn-primary">Register</button>
+                                 userName.value,password.value)"   class="btn btn-primary">Register (रजिस्टर करें)</button>
               </div>
             
         </form>
     </div>
 </div>
-<div class="alert alert-success" *ngIf="sucessMessage">{{ sucessMessage }}</div>
+
+<div *ngIf="sucessMessage">
+    <div class="alert alert-success" *ngIf="sucessMessage">{{ sucessMessage }}. Please click below to go to loing page.</div>
+       <a routerLink="/login" class="nav-link" routerLinkActive="active">
+            Go to Login page.
+          </a>
+    
+  </div>
+
 <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
 

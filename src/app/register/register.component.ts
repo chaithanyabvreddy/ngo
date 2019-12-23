@@ -27,12 +27,13 @@ export class RegisterComponent implements OnInit {
       emailId: [''],
       aadharCard: [''],
       phoneNumer: [''],
-      userName: ['']
+      userName: [''],
+      password:['']
     });
   }
 
-  registerUser(firstName:string,lastName:string,emailId:string,aadharCard:string,phoneNumer:number, userName:string){
-    this.registerService.registerUser(firstName,lastName,emailId,aadharCard,phoneNumer, userName).
+  registerUser(firstName:string,lastName:string,emailId:string,aadharCard:string,phoneNumer:number, userName:string,password:string){
+    this.registerService.registerUser(firstName,lastName,emailId,aadharCard,phoneNumer, userName, password).
     subscribe(
       res=>{
         console.log(res);
