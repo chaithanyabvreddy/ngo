@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { UserService } from './user.service';
 import { ProfileComponent } from './profile/profile.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     LoginComponent,
     LandingComponent,
-    ProfileComponent
+    ProfileComponent,
+    ComplaintComponent
   ],
   imports: [
     BrowserModule,

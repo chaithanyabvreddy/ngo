@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,13 @@ const routes: Routes = [
   {
     path: 'profile/:userName', 
     component: ProfileComponent
+  },
+  {
+    path: 'complaint', 
+    component: ComplaintComponent
   }
+
+  
 ];
 
 @NgModule({
